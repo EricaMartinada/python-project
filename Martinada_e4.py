@@ -9,4 +9,21 @@
 
 def triangle_perimeter(a, b, c):
 #Prompt for input
-data = input ("Enter the side lengths of a triangle")
+line = input ("Enter the side lengths of a triangle: ")
+#line = '3,4,5'
+
+(a,b,c) = (float (x) for x in line.split (","))
+
+P = triangle_perimeter (a,b,c)
+A = triangle_heronsarea (a,b,c)
+
+
+
+def triangle_heronsarea (a,b,c):
+    s = triangle_perimeter(a,b,c) / 2
+
+
+    area = sqrt (s* (s-a) * (s-b) * (s-c))
+    return area
+
+ print 
